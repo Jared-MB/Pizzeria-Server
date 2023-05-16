@@ -1,0 +1,6 @@
+export { default as AuthRoutes } from './auth.routes'
+export { default as OrdersRoutes } from './orders.routes'
+export { default as BookingRoutes } from './booking.routes'
+export { default as ClientRoutes } from './client.routes'
+export * from './index'
+export { default as ProductsRoutes } from './products.routes'
