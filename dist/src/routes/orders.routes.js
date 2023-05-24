@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const services_1 = require("../services");
+const router = (0, express_1.Router)();
+router.post('/api/orders', services_1.OrdersServices.createOrder);
+router.get('/api/orders', services_1.OrdersServices.getAllOrders);
+router.get('/api/orders-pending', services_1.OrdersServices.getAllPendingOrders);
+router.get('/api/orders/:id', services_1.OrdersServices.getOrderById);
+router.delete('/api/orders/:id', services_1.OrdersServices.cancelOrder);
+exports.default = router;
