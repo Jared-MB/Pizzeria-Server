@@ -4,12 +4,14 @@ import { AuthRoutes, BookingRoutes, OrdersRoutes, ProductsRoutes, ClientRoutes }
 import connectDB from './database'
 import { AuthService } from './services/auth.services'
 import { AuthenticationMiddleware } from './middlewares'
+import cors from 'cors'
 
 const app = express()
 dotenv.config()
 connectDB()
 
 app.use(express.json())
+app.use(cors())
 
 app.post('/api/auth/login', (_req, _res, next) => {
 	next()
